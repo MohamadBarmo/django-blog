@@ -1,0 +1,14 @@
+{% extends 'bookstore/main.html'%}
+{% load static %}
+
+{% block content %}
+<form  action="" method="POST">
+{% csrf_token%}
+{{ formset.management_form}}
+{% for item in formset%}
+{{item}} <br>
+{% endfor%}
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+ {% endblock %}

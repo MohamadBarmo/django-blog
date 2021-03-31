@@ -1,0 +1,30 @@
+
+
+{% extends 'bookstore/main.html'%}
+
+{% block content %}
+<h1 class='p-5'>book </h1> 
+<div class='container'>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      
+      <th scope="col">Name</th>
+      <th scope="col">Auther</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+     {% for item in allbooks %}
+     <tr>
+      <td>{{item.name}}</td>
+      <td>{{item.auther}}</td>
+      <td>{{item.price}}</td>
+      {% endfor %}
+    </tr>
+   
+  </tbody>
+</table>
+</div>
+{% endblock%}

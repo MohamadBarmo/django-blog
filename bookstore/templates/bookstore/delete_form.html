@@ -1,0 +1,15 @@
+{% extends 'bookstore/main.html'%}
+{% load static %}
+
+{% block content %}
+
+<h3> Are you  Sure ? </h3>
+<form  action="" method="POST">
+
+{% csrf_token%}
+<a href="{% url 'home'%}">return </a>
+
+<button type="submit" class="btn btn-primary">yes</button>
+
+
+ {% endblock %}
